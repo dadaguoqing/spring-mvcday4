@@ -1,0 +1,4 @@
+2019-03-20 at 20:12:53 CST DEBUG com.mybatis.TestMybatis 37 main - 插入1
+2019-03-20 at 20:21:34 CST DEBUG com.mybatis.TestMybatis 42 main - [User{id=1, name='1', pwd='1'}, User{id=2, name='2', pwd='2'}, User{id=3, name='3', pwd='3'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}]
+2019-03-20 at 23:06:15 CST DEBUG com.mybatis.TestMybatis 42 main - [User{id=1, name='1', pwd='1'}, User{id=2, name='2', pwd='2'}, User{id=3, name='3', pwd='3'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}]
+2019-03-20 at 23:09:16 CST DEBUG com.mybatis.TestMybatis 42 main - [User{id=1, name='1', pwd='1'}, User{id=2, name='2', pwd='2'}, User{id=3, name='3', pwd='3'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}]

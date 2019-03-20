@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <context:component-scan base-package="com"/>
+
+    <!-- 只把动态信息当做controller处理，忽略静态信息 -->
+    <mvc:default-servlet-handler/>
+    <!-- 配置静态资源  Spring MVC就不会做拦截 -->
+    <mvc:resources location="/" mapping="**/*.png"/>
+    <mvc:resources location="/" mapping="*.jpg"/>
+    <mvc:resources location="/" mapping="*.css"/>
+    <mvc:resources location="/" mapping="*.js"/>
+    <mvc:resources location="/" mapping="*.ico"/>
+    <mvc:resources location="/" mapping="*.gif"/>
+
+    <!-- 开启注解 -->
+    <mvc:annotation-driven/>
+
+    <!--拦截器配置-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/login.do"/>
+            <mvc:exclude-mapping path="/check.do"/>
+            <bean class="com.interception.LoginInterception"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!-- mvc核心组件ViewResolver -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/" p:suffix=".jsp"/>
+
+    <!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+    <!--<property name="exceptionMappings">-->
+    <!--<props>-->
+    <!--<prop key="java.lang.Exception">error</prop>-->
+    <!--</props>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+
+    <bean id="jdbcProp" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="classpath:jdbc.properties"/>
+    </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+    </bean>
+
+    <!--数据库-->
+    <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+          p:driverClassName="com.mysql.jdbc.Driver"
+          p:url="jdbc:mysql://127.0.0.1:3306/java11?useUnicode=true&amp;characterEncoding=UTF-8"
+          p:username="root"
+          p:password="root"
+    />
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"
+          p:dataSource-ref="dataSource"
+    />
+</beans>

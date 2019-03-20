@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<!--
+cache 配置给定命名空间的缓存
+cache-ref 从其他命名空间引用缓存配置
+resultType 返回值类型
+resultMap 描述如何从数据库结果集中装载你的对象
+parameterType 参数类型
+parameterMap 已过时
+sql 可重用的SQL语句块
+insert 插入语句
+update 更新语句
+delete 删除语句
+select 查询语句
+-->
+
+<!-- 指明当前xml对应的Mapper -->
+<mapper namespace="a">
+    <select id="selectAll" resultType="User">
+        select id,name,pwd from user
+    </select>
+
+    <insert id="insertUser" parameterType="User">
+        insert into user (name, pwd) values (#{name}, #{pwd})
+    </insert>
+    <update id="updateById" parameterType="User">
+        update user set name=#{name},pwd=#{pwd} where id=#{id}
+    </update>
+
+    <delete id="deleteById" parameterType="int">
+        delete from user where id = #{id}
+    </delete>
+    <!-- 自定义返回结果集 如果实体属性名与列名一致则不需要此部分，若不一致则需要 -->
+    <resultMap type="User" id="BaseResultMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="pwd" column="pwd"/>
+    </resultMap>
+    <!-- 在各种标签中的id属性必须和接口中的方法名相同 ， id属性值必须是唯一的，不能够重复使用。
+    parameterType属性指明查询时使用的参数类型，resultType属性指明查询返回的结果集类型-->
+    <!-- useGeneratedKeys：（ 仅 对 insert 有 用 ） 这 会 告 诉 MyBatis 使 用 JDBC 的getGeneratedKeys
+                方法来取出由数据（比如：像 MySQL 和 SQLServer 这样的数据库管理系统的自动递增字段）内部生成的主键。默认值： false。 -->
+    <!--keyProperty： （仅对 insert有用）标记一个属性，
+    MyBatis 会通过 getGeneratedKeys或者通过 insert 语句的 selectKey 子元素设置它的值。默认：不设置。 -->
+    <!--#{}中的内容，为占位符，当参数为某个JavaBean时，表示放置该Bean对象的属性值  -->
+
+</mapper>    
+    
