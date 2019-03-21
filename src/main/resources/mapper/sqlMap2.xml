@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.IUserDao2">
+    <insert id="insertByUser" parameterType="User">
+        insert into user (name,pwd) value("${name}",${pwd})
+    </insert>
+    <delete id="deleteByUser" parameterType="User">
+        delete from user where id = ${id}
+    </delete>
+    <update id="updateByUser" parameterType="User">
+        update user set name = "${name}",pwd = ${pwd} where id = ${id}
+    </update>
+    <select id="selectAllUser" resultType="User">
+        select id,name,pwd from user
+    </select>
+    <select id="selectUser" parameterType="User" resultType="User">
+        select id ,name,pwd from user where id = ${id}
+    </select>
+
+    <resultMap type="User" id="BaseResultMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="pwd" column="pwd"/>
+    </resultMap>
+
+</mapper>    
+    

@@ -2,3 +2,29 @@
 2019-03-20 at 20:21:34 CST DEBUG com.mybatis.TestMybatis 42 main - [User{id=1, name='1', pwd='1'}, User{id=2, name='2', pwd='2'}, User{id=3, name='3', pwd='3'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}]
 2019-03-20 at 23:06:15 CST DEBUG com.mybatis.TestMybatis 42 main - [User{id=1, name='1', pwd='1'}, User{id=2, name='2', pwd='2'}, User{id=3, name='3', pwd='3'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}]
 2019-03-20 at 23:09:16 CST DEBUG com.mybatis.TestMybatis 42 main - [User{id=1, name='1', pwd='1'}, User{id=2, name='2', pwd='2'}, User{id=3, name='3', pwd='3'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}]
+2019-03-21 at 09:44:00 CST DEBUG com.mybatis.TestMybatis 49 main - [User{id=1, name='1', pwd='1'}, User{id=2, name='2', pwd='2'}, User{id=3, name='3', pwd='3'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}]
+2019-03-21 at 09:45:21 CST DEBUG com.mybatis.TestMybatis 53 main - [User{id=1, name='1', pwd='1'}, User{id=3, name='3', pwd='3'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}]
+2019-03-21 at 09:50:50 CST DEBUG com.mybatis.TestMybatis 50 main - 插入1
+2019-03-21 at 09:50:50 CST DEBUG com.mybatis.TestMybatis 54 main - [User{id=1, name='1', pwd='1'}, User{id=3, name='3', pwd='3'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}, User{id=6, name='讼棍', pwd='123'}]
+2019-03-21 at 09:51:07 CST DEBUG com.mybatis.TestMybatis 50 main - 插入1
+2019-03-21 at 09:51:07 CST DEBUG com.mybatis.TestMybatis 54 main - [User{id=1, name='1', pwd='1'}, User{id=3, name='3', pwd='3'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}, User{id=6, name='讼棍', pwd='123'}, User{id=7, name='讼棍', pwd='123'}]
+2019-03-21 at 09:53:08 CST DEBUG com.mybatis.TestMybatis 50 main - 插入1
+2019-03-21 at 09:53:08 CST DEBUG com.mybatis.TestMybatis 54 main - [User{id=1, name='1', pwd='1'}, User{id=3, name='3', pwd='3'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}, User{id=6, name='讼棍', pwd='123'}, User{id=7, name='讼棍', pwd='123'}, User{id=8, name='讼棍', pwd='122213'}]
+2019-03-21 at 09:55:00 CST DEBUG com.mybatis.TestMybatis 50 main - 插入1
+2019-03-21 at 09:55:22 CST DEBUG com.mybatis.TestMybatis 50 main - 插入1
+2019-03-21 at 09:55:22 CST DEBUG com.mybatis.TestMybatis 52 main - 修改1
+2019-03-21 at 09:55:22 CST DEBUG com.mybatis.TestMybatis 55 main - [User{id=1, name='1', pwd='1'}, User{id=3, name='nihao', pwd='789'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}, User{id=6, name='讼棍', pwd='123'}, User{id=7, name='讼棍', pwd='123'}, User{id=8, name='讼棍', pwd='122213'}, User{id=10, name='讼棍', pwd='122213'}]
+2019-03-21 at 09:56:31 CST DEBUG com.mybatis.TestMybatis 50 main - 插入1
+2019-03-21 at 09:56:31 CST DEBUG com.mybatis.TestMybatis 52 main - 修改1
+2019-03-21 at 09:58:26 CST DEBUG com.mybatis.TestMybatis 50 main - 插入1
+2019-03-21 at 09:58:26 CST DEBUG com.mybatis.TestMybatis 52 main - 修改1
+2019-03-21 at 09:58:26 CST DEBUG com.mybatis.TestMybatis 54 main - User{id=3, name='nihao', pwd='789'}
+2019-03-21 at 09:58:26 CST DEBUG com.mybatis.TestMybatis 56 main - [User{id=1, name='1', pwd='1'}, User{id=3, name='nihao', pwd='789'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}, User{id=6, name='讼棍', pwd='123'}, User{id=7, name='讼棍', pwd='123'}, User{id=8, name='讼棍', pwd='122213'}, User{id=10, name='讼棍', pwd='122213'}, User{id=12, name='讼棍', pwd='122213'}]
+2019-03-21 at 09:59:33 CST DEBUG com.mybatis.TestMybatis 49 main - 插入1
+2019-03-21 at 09:59:33 CST DEBUG com.mybatis.TestMybatis 51 main - 修改1
+2019-03-21 at 09:59:33 CST DEBUG com.mybatis.TestMybatis 53 main - User{id=3, name='nihao', pwd='789'}
+2019-03-21 at 09:59:33 CST DEBUG com.mybatis.TestMybatis 55 main - [User{id=1, name='1', pwd='1'}, User{id=3, name='nihao', pwd='789'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}, User{id=6, name='讼棍', pwd='123'}, User{id=7, name='讼棍', pwd='123'}, User{id=8, name='讼棍', pwd='122213'}, User{id=10, name='讼棍', pwd='122213'}, User{id=12, name='讼棍', pwd='122213'}, User{id=13, name='讼棍', pwd='122213'}]
+2019-03-21 at 11:18:43 CST DEBUG com.mybatis.TestMybatis 49 main - 插入1
+2019-03-21 at 11:18:43 CST DEBUG com.mybatis.TestMybatis 51 main - 修改0
+2019-03-21 at 11:18:43 CST DEBUG com.mybatis.TestMybatis 53 main - null
+2019-03-21 at 11:18:43 CST DEBUG com.mybatis.TestMybatis 55 main - [User{id=1, name='1', pwd='1'}, User{id=4, name='是', pwd='5'}, User{id=5, name='是', pwd='5'}, User{id=6, name='讼棍', pwd='123'}, User{id=7, name='讼棍', pwd='123'}, User{id=8, name='讼棍', pwd='122213'}, User{id=10, name='讼棍', pwd='122213'}, User{id=12, name='讼棍', pwd='122213'}, User{id=13, name='讼棍', pwd='122213'}, User{id=14, name='讼棍', pwd='122213'}]
